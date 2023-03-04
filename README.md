@@ -3,8 +3,8 @@
 ## Introduction
 One of the principal things that  we should avoid using react is to have to many renders.
 
-## [Practices and Recommendations](##Practices/Recommendations)
-  - [Exports](###Exports)
+## [Practices and Recommendations](#practicesrecommendations)
+  - [Exports](#exports)
   - Default Props
   - React Fragment
   - Architecture Structure
@@ -27,6 +27,6 @@ One of the principal things that  we should avoid using react is to have to many
 ## Practices/Recommendations
 ### Exports
 
-<p>There are two ways to use Exports in ReactJS.
+There are two ways to use Exports in ReactJS.
 Export default
-</p>
+
