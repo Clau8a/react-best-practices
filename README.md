@@ -7,13 +7,15 @@ One of the principal things to avoid when programming with React is to have to m
   - [Exports](#exports)
   - [Default Props](#default-props)
   - [React Fragment](#react-fragment)
-  - Architecture Structure
-  - Cancel Pending Requests
+  - [Cancel Pending Requests](#cancel-pending-requests)
+  - Debounce
   - Compound Components
+  - HOC
+  - Architecture Structure
   - Lazy Loading
   - SOLID
   - HOC
-  - Debounce
+  
   - Custom Hooks
 
 ## Anti-Patterns
@@ -107,6 +109,13 @@ const Message = ({ message="No content provided!" }) =>{
 ### React Fragment
 
 [Example](https://codesandbox.io/s/react-fragment-43edci?file=/src/App.js)
+
+### [Back to top](#react-best-practices)
+---
+
+### Cancel Pending Requests
+
+[Example](https://codesandbox.io/s/react-update-state-hj8244)
 
 ### [Back to top](#react-best-practices)
 ---
