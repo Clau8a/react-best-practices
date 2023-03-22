@@ -8,14 +8,12 @@ One of the principal things to avoid when programming with React is to have to m
   - [Default Props](#default-props)
   - [React Fragment](#react-fragment)
   - [Cancel Pending Requests](#cancel-pending-requests)
-  - Debounce
   - Compound Components
   - HOC
   - Architecture Structure
+  - Debounce
   - Lazy Loading
   - SOLID
-  - HOC
-  
   - Custom Hooks
 
 ## Anti-Patterns
