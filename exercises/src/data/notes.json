@@ -1,5 +1,7 @@
 [
   {
+    "id":1,
+    "labels": [],
     "title": "this is the note title",
     "body": {
       "type": "text",
@@ -7,6 +9,10 @@
     }
   },
   {
+    "id":2,
+    "labels": [
+      "work"
+    ],
     "title": "Lexitas sprint 1",
     "body": {
       "type": "checkList",
@@ -32,6 +38,17 @@
           "text": "Update QA with latest changes."
         }
       ]
+    }
+  },
+  {
+    "id":3,
+    "labels": [
+      "recipes"
+    ],
+    "title": "this is the note title",
+    "body": {
+      "type": "text",
+      "content": "this is the note body"
     }
   }
 ]

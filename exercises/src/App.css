@@ -1,6 +1,8 @@
 :root {
   --primary-color: #74E0AA;
   --secondary-color: #FCFEB1;
+  --label-bg-color: #BEE893;
+  --checkbox-color: #C4D9A9;
 }
 
 
@@ -17,7 +19,8 @@
   font-size: 30px;
   font-weight: 600;
 }
-.card-container{
+
+.card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -26,4 +29,23 @@
 .card-container .card {
   margin: 5px;
   max-width: 250px;
+}
+
+.card-container .card-footer {
+  border: none;
+  background-color: #fff;
+}
+
+.App .nav-link {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.card-container .text-bg-info {
+  background-color: var(--primary-color) !important;
+}
+
+.card-container .form-check-input:checked {
+  background-color: var(--checkbox-color);
+  border-color: var(--checkbox-color);
 }

@@ -1,11 +1,9 @@
 import './App.css';
-import notesList from "./notes.json"
+import { Tabs } from './components/Tabs';
+import notesList from "./data/notes.json"
 
 function App() {
   return (<>
-    <head>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-    </head>
     <header className="header">
       Welcome to Notes
     </header>
@@ -15,43 +13,73 @@ function App() {
           <input type="text" className="form-control" placeholder="Take notes" />
           <button className="btn btn-outline-secondary" type="button">Button</button>
         </div>
-        <div className="card-container">
-          {
-            notesList.map((note) => (
-              <div key={note.title} className="card">
-                <div className="card-body">
-                  <h5 className="card-title">
-                    {note.title}
-                  </h5>
-                  {
-                    note.body.type === "text" &&
-                    <div className="card-text">
-                      {note.body.content}
-                    </div>
-                  }
-                  {
-                    note.body.type === "checkList" &&
-                    <div className="card-text">
-                      {note.body.content.map((item) => (
-                        <div className="form-check" key={item.text}>
-                          {
-                            item.checked ?
-                              <input className="form-check-input" type="checkbox" checked />
-                              :
-                              <input className="form-check-input" type="checkbox" />
-                          }
-                          <label className="form-check-label" for="flexCheckDefault">
-                            {item.text}
-                          </label>
+
+        <Tabs>
+          <Tabs.TabsWrapper defaultActiveTab="1">
+            <Tabs.Tab tab="1">
+              All
+            </Tabs.Tab>
+            <Tabs.Tab tab="2">
+              Work
+            </Tabs.Tab>
+            <Tabs.Tab tab="3">
+              Recipes
+            </Tabs.Tab>
+          </Tabs.TabsWrapper>
+          <Tabs.TabContent>
+            <Tabs.TabPanel tab="1">
+              <div className="card-container">
+                {
+                  notesList.map((note) => (
+                    <div key={note.id} className="card">
+                      <div className="card-body">
+                        <h5 className="card-title">
+                          {note.title}
+                        </h5>
+                        {
+                          note.body.type === "text" &&
+                          <div className="card-text">
+                            {note.body.content}
+                          </div>
+                        }
+                        {
+                          note.body.type === "checkList" &&
+                          <div className="card-text">
+                            {note.body.content.map((item, i) => (
+                              <div className="form-check" key={item.i}>
+                                {
+                                  item.checked ?
+                                    <input className="form-check-input" type="checkbox" defaultChecked />
+                                    :
+                                    <input className="form-check-input" type="checkbox" />
+                                }
+                                <label className="form-check-label" htmlFor="flexCheckDefault">
+                                  {item.text}
+                                </label>
+                              </div>
+                            ))}
+                          </div>
+                        }
+                      </div>
+                      {
+                        note.labels.length > 0 &&
+                        <div className="card-footer">
+                          {note.labels.map((label) => <span className="badge text-bg-info">{label}</span>)}
                         </div>
-                      ))}
+
+                      }
                     </div>
-                  }
-                </div>
+                  ))
+                }
               </div>
-            ))
-          }
-        </div>
+            </Tabs.TabPanel>
+            <Tabs.TabPanel tab="2">
+              empty
+            </Tabs.TabPanel>
+          </Tabs.TabContent>
+        </Tabs>
+
+
       </div>
     </div>
   </>
