@@ -1,0 +1,29 @@
+:root {
+  --primary-color: #74E0AA;
+  --secondary-color: #FCFEB1;
+}
+
+
+.App {
+  background-color: var(--secondary-color);
+  padding-top: 20px;
+  height: 100vh;
+}
+
+.header {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 20px 30px;
+  font-size: 30px;
+  font-weight: 600;
+}
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.card-container .card {
+  margin: 5px;
+  max-width: 250px;
+}

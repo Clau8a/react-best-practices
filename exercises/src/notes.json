@@ -1,0 +1,37 @@
+[
+  {
+    "title": "this is the note title",
+    "body": {
+      "type": "text",
+      "content": "this is the note body"
+    }
+  },
+  {
+    "title": "Lexitas sprint 1",
+    "body": {
+      "type": "checkList",
+      "content": [
+        {
+          "checked": true,
+          "text": "Assign tasks"
+        },
+        {
+          "checked": false,
+          "text": "Resolve blockers"
+        },
+        {
+          "checked": false,
+          "text": "Organize daily meetings"
+        },
+        {
+          "checked": false,
+          "text": "Sync DEV with QA"
+        },
+        {
+          "checked": false,
+          "text": "Update QA with latest changes."
+        }
+      ]
+    }
+  }
+]
