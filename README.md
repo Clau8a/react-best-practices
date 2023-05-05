@@ -11,7 +11,7 @@ One of the principal things to avoid when programming with React is to have to m
   - Compound Components
   - HOC
   - Architecture Structure
-  - Debounce
+  - [Debounce](#debounce)
   - Lazy Loading
   - SOLID
   - Custom Hooks
@@ -114,6 +114,13 @@ const Message = ({ message="No content provided!" }) =>{
 ### Cancel Pending Requests
 
 [Example](https://codesandbox.io/s/react-update-state-hj8244)
+
+### [Back to top](#react-best-practices)
+---
+
+### Debounce
+
+[Example](https://codesandbox.io/s/debounce-ex1ew0?file=/src/App.js)
 
 ### [Back to top](#react-best-practices)
 ---
