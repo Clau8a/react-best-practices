@@ -10,7 +10,7 @@ One of the principal things to avoid when programming with React is to have to m
   - [Cancel Pending Requests](#cancel-pending-requests)
   - Compound Components
   - HOC
-  - Architecture Structure
+  - [Architecture Structure](#arquitecture-structure)
   - [Debounce](#debounce)
   - Lazy Loading
   - SOLID
@@ -114,6 +114,78 @@ const Message = ({ message="No content provided!" }) =>{
 ### Cancel Pending Requests
 
 [Example](https://codesandbox.io/s/react-update-state-hj8244)
+
+### [Back to top](#react-best-practices)
+---
+
+
+### Arquitecture Structure
+#### Grouping by file types
+```
+├── src
+│   ├── style
+│   │   ├── **/*.css
+├── components
+│   ├── cards
+│   │   ├── card.jsx
+│   ├── alerts
+│   │   ├── alert.jsx
+│   ├── index.jsx
+├── images
+├── node_modules
+├── package.json
+├── package-lock.json 
+└── .gitignore
+```
+
+### Grouping by module
+```
+├── src
+│   ├── components
+│   │   ├── cards
+│   │   │   ├── card.jsx
+│   │   │   ├── card.css
+│   │   │   ├── card.test.js
+│   │   ├── alerts
+│   │   │   ├── alert.jsx
+│   │   │   ├── alert.css
+│   │   │   ├── alert.test.js
+│   │   ├── app
+│   │   │   ├── app.jsx
+│   │   │   ├── app.css
+│   │   │   ├── app.test.js
+├── api
+│   ├── users
+│   │   ├── users.js
+│   │   ├── users.test.js
+├── node_modules
+├── package.json
+├── package-lock.json 
+└── .gitignore
+```
+
+### Atomic Desing
+```
+├── src
+│   ├── components
+│   │   ├── atoms
+│   │   │   ├── cardTitle
+│   │   │   │   ├── cardTile.jsx
+│   │   │   │   ├── cardTitle.css
+│   │   │   │   ├── cardTitle.test.js
+│   │   ├── molecules
+│   │   ├── organisms
+│   │   ├── templates
+│   │   ├── pages
+├── api
+│   ├── users
+│   │   ├── users.js
+│   │   ├── users.test.js
+├── node_modules
+├── package.json
+├── package-lock.json 
+└── .gitignore
+```
 
 ### [Back to top](#react-best-practices)
 ---
