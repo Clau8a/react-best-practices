@@ -13,8 +13,8 @@ One of the principal things to avoid when programming with React is to have to m
   - [Architecture Structure](#arquitecture-structure)
   - [Debounce](#debounce)
   - Lazy Loading
-  - SOLID
   - Custom Hooks
+  - SOLID
 
 ## Anti-Patterns
   - Props Drilling
